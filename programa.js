@@ -31,7 +31,24 @@ function construirFilas (){
         let fuenteActual = fuentes [k];
 
     for(let i=0; i<fuenteActual.length;i++){
-    let cuerpoTabla = document.getElementById("cuerpoTabla");
+   
+        let cuerpoTabla=document.getElementById("cuerpoTabla");
+        let clave = fuenteActual.key(i);
+        let valor = fuenteActual.getItem(fuenteActual.key(i));
+
+        cuerpoTabla.innerHTML = cuerpoTabla.innerHTML + `<tr><td>${clave}</td><td>${valor}</td></tr>`
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+        /* let cuerpoTabla = document.getElementById("cuerpoTabla");
     let fila = document.createElement("tr");
     
     let celda = document.createElement("td");
@@ -47,6 +64,7 @@ function construirFilas (){
     fila.appendChild(celda);
     
     cuerpoTabla.appendChild(fila);
+    */
     }
 }
 }
